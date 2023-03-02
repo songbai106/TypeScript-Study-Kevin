@@ -1,5 +1,5 @@
 // 「类型 + 方括号」表示法§
-let fibonacci: number[] = [1, 1, 2, 3, 5];
+let fibonacci: (string|number)[] = [1, 1, 2, 3, 5, 'a'];
 let arr:string[] = ["1","2"];
 
 // 数组的项中不允许出现其他的类型：
@@ -18,6 +18,9 @@ interface NumberArray {
 }
 let fibonacci4: NumberArray = [1, 1, 2, 3, 5];
 
+
+// 类数组
+// 类数组（Array-like Object）不是数组类型
 function sum() {
     let args: number[] = arguments;
 }

@@ -7,21 +7,21 @@ let x: [string, number];
 
 
 // 元组类型的解构赋值
-let employee: [number, string] = [1, "Semlinker"];
+let employee: [number, string] = [1, "Kevin"];
 let [id, username] = employee;
 let employee1: [string, string, object] = ['s1', 's2', {s3: 's3'}]
 let [a, b, c] = employee1
-console.log(`id: ${id}`);
-console.log(`username: ${username}`);
-console.log(a, b, c)
+console.log(`id: ${id}`); // "id: 1"
+console.log(`username: ${username}`); // "username: Kevin"
+console.log(a, b, c) // "s1",  "s2",  {"s3": "s3"} 
 
 // 元组类型的可选元素
 // 与函数签名类型，在定义元组类型时，我们也可以通过 ? 号来声明元组类型的可选元素，示例如下：
 let optionalTuple: [string, boolean?];
-optionalTuple = ["Semlinker", true];
-console.log(`optionalTuple : ${optionalTuple}`); // optionalTuple : Semlinker,true
-optionalTuple = ["Kakuqo"];
-console.log(`optionalTuple : ${optionalTuple}`); // optionalTuple : Kakuqo
+optionalTuple = ["Kevin", true];
+console.log(`optionalTuple : ${optionalTuple}`); // optionalTuple : Kevin,true
+optionalTuple = ["kakaluote"];
+console.log(`optionalTuple : ${optionalTuple}`); // optionalTuple : kakaluote
 
 
 // 元组类型的剩余元素
@@ -31,9 +31,9 @@ console.log(`optionalTuple : ${optionalTuple}`); // optionalTuple : Kakuqo
  * 例如，[number, ...string[]] 表示带有一个 number 元素和任意数量string 类型元素的元组类型。例子：
  */
  type RestTupleType = [number, ...string[]];
- let restTuple: RestTupleType = [666, "Semlinker", "Kakuqo", "Lolo"];
- console.log(restTuple[0]);
- console.log(restTuple[1]);
+ let restTuple: RestTupleType = [666, "sons", "of", "forest"];
+ console.log(restTuple[0]); // 666
+ console.log(restTuple[1]); // "sons"
 
 
 // 只读的元组类型

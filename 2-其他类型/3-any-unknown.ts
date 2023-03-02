@@ -48,6 +48,8 @@ function getDogName() {
    if (typeof dogName === 'string') {
      const upName2 = dogName.toLowerCase(); // OK
    }
+
+
    // 类型断言 
    const upName3 = (dogName as string).toLowerCase(); // OK
 
