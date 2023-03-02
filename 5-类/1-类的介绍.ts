@@ -10,31 +10,56 @@
 // 接口（Interfaces）：不同类之间公有的属性或方法，可以抽象成一个接口。接口可以被类实现（implements）。一个类只能继承自另一个类，但是可以实现多个接口
 
 
+// ES6 中类的用法§
 
-// ES6 中类的用法
+// 1、属性和方法
 // 使用 class 定义类，使用 constructor 定义构造函数。
 // 通过 new 生成新实例的时候，会自动调用构造函数。
-
-// TypeScript 可以使用三种访问修饰符（Access Modifiers），分别是 public、private 和 protected。
-
-// public 修饰的属性或方法是公有的，可以在任何地方被访问到，默认所有的属性和方法都是 public 的
-// private 修饰的属性或方法是私有的，不能在声明它的类的外部访问
-// protected 修饰的属性或方法是受保护的，它和 private 类似，区别是它在子类中也是允许被访问的
-
-// TypeScript 中类的用法
 class Animal {
-    public name;
-    public constructor(name: string) {
+  public name;
+  constructor(name) {
       this.name = name;
-    }
   }
-  
-  let a2:Animal = new Animal('KEVIN');
-  console.log(a2.name); // KEVIN
-  a2.name = 'Tom';
-  console.log(a2.name); // Tom
+  sayHi() {
+      return `My name is ${this.name}`;
+  }
+}
 
+let a = new Animal('123123');
+console.log(a.sayHi()); // My name is Jack
 
+// 2、类的继承
+// 使用 extends 关键字实现继承，子类中使用 super 关键字来调用父类的构造函数和方法。
+class Cat extends Animal {
+  constructor(name) {
+    super(name); // 调用父类的 constructor(name)
+    console.log(this.name);
+  }
+  sayHi() {
+    return 'Meow, ' + super.sayHi(); // 调用父类的 sayHi()
+  }
+}
+
+let c = new Cat('Tom'); // Tom
+console.log(c.sayHi()); // Meow, My name is Tom
+
+// 3、存取器
+// 使用 getter 和 setter 可以改变属性的赋值和读取行为：
+class AnimalSet {
+  constructor(name) {
+    this.name = name;
+  }
+  get name() {
+    return 'Jack';
+  }
+  set name(value) {
+    console.log('setter: ' + value);
+  }
+}
+
+let aSet = new AnimalSet('Kitty'); // setter: Kitty
+aSet.name = 'Tom'; // setter: Tom
+console.log(aSet.name); // Jack
 
 
 
