@@ -3,11 +3,16 @@ function sum(x: number, y: number): number {
     return x + y;
 }
 
+
 // 函数表达式
 // 在 TypeScript 的类型定义中，=> 用来表示函数的定义，左边是输入类型，需要用括号括起来，右边是输出类型。
 let mySum: (x: number, y: number) => string = function (x: number, y: number): string {
     return x + y + '';
 };
+
+let fn: Function = function (x: number) {
+    return 1 + x
+}
 
 // 接口定义函数类型
 // 采用函数表达式|接口定义函数的方式时，对等号左侧进行类型限制，可以保证以后对函数名赋值时保证参数个数、参数类型、返回值类型不变。

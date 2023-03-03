@@ -23,10 +23,18 @@ const sayHello = (name: string | undefined) => {
     
     /* ... */
   };
+// 这里 name 的类型是 string | undefined 意味着可以将 string 或 undefined 的值传递给sayHello 函数。
+sayHello("ahashdahsd"); 
+sayHello(undefined);
 
 
 
+let num: 1 | 2 ;
+type EventNames = 'click' | 'scroll' | 'mousemove';
+// 以上示例中的 1、2 或 'click' 被称为字面量类型，用来约束取值只能是某几个值中的一个。
 
+num = 3
+let EventNames: EventNames = 'click'
 
 
 export { }
