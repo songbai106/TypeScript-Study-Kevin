@@ -1,7 +1,7 @@
 // 类型断言（Type Assertion）可以用来手动指定一个值的类型。
 /**
  * 有时候你会遇到这样的情况，你会比 TypeScript 更了解某个值的详细信息。通常这会发生在你清楚地知道一个实体具有比它现有类型更确切的类型。
- * TypeScript 类型检测无法做到绝对智能，毕竟程序不能像人一样思考。有时会碰到我们比 TypeScript 更清楚实际类型的情况，比如：
+ * TypeScript 类型检测无法做到绝对智能，有时会碰到我们比 TypeScript 更清楚实际类型的情况，比如：
  */
  const arrayNumber: number[] = [1, 2, 3, 4];
  const greaterThan2: number = arrayNumber.find(num => num > 2); // 提示 ts(2322)
@@ -14,7 +14,7 @@
 比如，我们可以使用 as 语法做类型断言，如下代码所示：
  */
 const arrayNumber3: number[] = [1, 2, 3, 4];
-const greaterThan3: number = arrayNumber.find(num => num > 2) as number;
+const greaterThan4: number = arrayNumber3.find(num => num > 2) as number;  // 3
 
 // 语法
 // 尖括号 语法

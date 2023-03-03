@@ -46,7 +46,6 @@ interface Point { x: number; }
 interface Point { y: number; }
 const point: Point = { x: 1, y: 2 };
 
-
 // 扩展
 // 两者的扩展方式不同，但并不互斥。接口可以扩展类型别名，同理，类型别名也可以扩展接口。
 // 接口的扩展就是继承，通过 extends 来实现。类型别名的扩展就是交叉类型，通过 & 来实现。

@@ -36,7 +36,6 @@ function buildName(firstName: string, lastName?: string, defaultParams:string = 
 }
 let tomcat = buildName('Tom', 'Cat'); // Tom Cat default
 let tom = buildName('Tom'); // Tom default
-// console.log(tomcat, tom);
 
 
 // 剩余参数
@@ -68,7 +67,7 @@ function add(a:Types, b:Types) {
   }
   return a + b;
 }
-const result = add('Semlinker', ' Kakuqo');
+const result = add('Messi', ' Kakaluote');
 result.split(' ');
 
 function reverse(x: number): number;
